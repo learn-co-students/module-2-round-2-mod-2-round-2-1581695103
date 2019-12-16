@@ -17,7 +17,6 @@ In this repo, there is a Rails application with some features built out. Your jo
 
 Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
-
 ## The Domain
 
 You've just been hired by 'Marvel Comics' - congratulations! The production staff wants you to make a website that will allow the fans to create [heroines, women superheroes](http://www.dictionary.com/browse/heroine). To do this, we need a way to keep track of all of the new heroines and powers that have been created by the fans.
@@ -26,9 +25,11 @@ Luckily, another developer has already started the job. We have a model for hero
 
 We have several different powers and each can be bestowed upon **more than one heroine**. Each heroine can only have **one power**.
 
-## Instructions / Deliverables
+## Instructions
 
-Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one.
+Update the code of the application to meet the following deliverables. Where appropriate, follow RESTful naming conventions and the MVC pattern to divide responsibility.
+
+***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
@@ -55,7 +56,6 @@ Read through the instructions to get a sense of the scope of this code challenge
 8. Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page.
 
 ![Searching on the heroines route and finding heroines by a power](search_by_power.gif)
-
 
 ### Hints / Tips
 + Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working.
