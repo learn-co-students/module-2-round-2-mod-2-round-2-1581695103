@@ -1,18 +1,22 @@
-# Rails Code Challenge
+# Rails Code Challenge - Superheroines
 
-It's time to put our Rails know-how to the test. Today, we are asked to build an application that will be a superheroine character creator!
+For this assessment, you'll be working with a superheroines and powers domain.
 
-## Objectives
-+ MVC
-+ REST
-+ Request/Response Cycle
-+ Form/Form Helpers
-+ ActiveRecord
-+ Validations
+In this repo, there is a Rails application with some features built out. Your job is to extend this code to add the functionality described in the deliverables below.
+
+## Topics
+
+- MVC
+- REST
+- Request-Response Cycle
+- Forms and Form Helpers
+- ActiveRecord
+- Validations
 
 ## Setup
 
-Before you begin, fork and clone this repo, run `bundle install` and `rake db:migrate` to get started.
+Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
+
 
 ## The Domain
 
