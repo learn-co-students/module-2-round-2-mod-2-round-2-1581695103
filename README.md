@@ -1,6 +1,6 @@
 # Rails Code Challenge - Superheroines
 
-For this assessment, you'll be working with a superheroines and powers domain.
+For this assessment, you'll be working with a heroines and powers domain.
 
 In this repo, there is a Rails application with some features built out. Your job is to extend this code to add the functionality described in the deliverables below.
 
@@ -19,9 +19,9 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 ## The Domain
 
-There are three models in the domain: Power, Heroine, and a join model HeroinePower.
+There are two models in the domain: Power and Heroine.
 
-Heroines can have many powers, and each Power can belong to many Heroines. The join model `HeroinePower` connects **one heroine** with **one power**.
+Each Heroine has one power. Many Heroines can have the same Power.
 
 ## Instructions
 
@@ -29,9 +29,11 @@ Update the code of the application to meet the following deliverables. Where app
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Create the HeroinePower model
+### 1. Heroine Power association
 
-Create the associations between models. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+Create the association between the models.
+
+After you've set up your relationships, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
 
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
@@ -45,7 +47,7 @@ Heroine show page should include the
 
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel)
-- power
+- power name
 
 The power should link to the power show page.  
 
@@ -56,23 +58,44 @@ Power show page should include the
 - name
 - description
 
-### 5. Heroine Create Page
+### 5. Heroine Create page
 
-As a visitor to the website, I should be able to create a new heroine with her name and super name.
+Show a form to create new Heroine. It should have:
 
-### 6. Heroine Validations
+- an input for name
+- an input for super name
+- a select dropdown to choose a power
+- a submit button to create the Heroine
 
-Make sure no two heroines have the same super name.
-
-### 7. Additional Heroine Validations
-
-The form should also allow each heroine to be created with **only one of the existing powers**.
+After successfully creating a Heroine, the user should be redirected to the new Heroine's show page.
 
 ![A form for adding a new heroine](new_heroine_form.gif)
 
+### 6. Heroine Validations
+
+Add validations to the Heroine model:
+
+- must have a name
+- must have a super name
+- must have a power
+
+Add error handling to the create action. If a user tries to create an invalid Heroine, it should show the form with the values the user submitted and the validation errors.
+
+### 7. Additional Heroine Validations
+
+No two heroines can have the same super name.
+
+- Add a validation to prevent this.
+- If necessary, update the error handling in the create action to display this error
+
 ### 8. Heroine index view filter
 
-Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page.
+Users should be able to filter the Heroine index view by Power names.
+
+- Add a form to the top of the index view for the user to submit a search term
+- Add handling in the index action.
+
+If a user submits a search term, only display Heroines whose Power's name matches the submitted search term.
 
 ![Searching on the heroines route and finding heroines by a power](search_by_power.gif)
 
