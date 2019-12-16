@@ -19,11 +19,9 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 ## The Domain
 
-You've just been hired by 'Marvel Comics' - congratulations! The production staff wants you to make a website that will allow the fans to create [heroines, women superheroes](http://www.dictionary.com/browse/heroine). To do this, we need a way to keep track of all of the new heroines and powers that have been created by the fans.
+There are three models in the domain: Power, Heroine, and a join model HeroinePower.
 
-Luckily, another developer has already started the job. We have a model for heroines and a model for powers. Once the database is seeded, visiting `/heroines` displays all of the heroines, and visiting `/powers` displays all of the powers. We just don't have a way to associate heroines with powers.
-
-We have several different powers and each can be bestowed upon **more than one heroine**. Each heroine can only have **one power**.
+Heroines can have many powers, and each Power can belong to many Heroines. The join model `HeroinePower` connects **one heroine** with **one power**.
 
 ## Instructions
 
@@ -31,40 +29,52 @@ Update the code of the application to meet the following deliverables. Where app
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
+### 1. Create the HeroinePower model
+
+Create the associations between models. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+### 2. Heroine index page links
 
-2. On the heroines index page, a heroine's super name should link to that heroine's show page.
+On the heroines index page, a heroine's super name should link to that heroine's show page.
 
-3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
+### 3. Heroine show page
 
-4. The power show page should have its name and description.
+Heroine show page should include the
 
-5. As a visitor to the website, I should be able to create a new heroine with her name and super name.
+- name (eg. Kamala Khan)
+- super name (eg. Ms. Marvel)
+- power
 
-6. The form should also allow each heroine to be created with **only one of the existing powers**.
+The power should link to the power show page.  
 
-  ![A form for adding a new heroine](new_heroine_form.gif)
+### 4. Power show page
 
-7. Make sure no two heroines have the same super name.
+Power show page should include the
 
-# BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
+- name
+- description
 
-**If you have reached this point, please `git add` and `git commit` before proceeding!**
+### 5. Heroine Create Page
 
-8. Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page.
+As a visitor to the website, I should be able to create a new heroine with her name and super name.
+
+### 6. Heroine Validations
+
+Make sure no two heroines have the same super name.
+
+### 7. Additional Heroine Validations
+
+The form should also allow each heroine to be created with **only one of the existing powers**.
+
+![A form for adding a new heroine](new_heroine_form.gif)
+
+### 8. Heroine index view filter
+
+Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page.
 
 ![Searching on the heroines route and finding heroines by a power](search_by_power.gif)
-
-### Hints / Tips
-+ Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working.
-+ A child model cannot be persisted without being associated with its parent model.
-+ More than one heroine can have the same power.
-+ More than one heroine can have the same power.
-+ More than one heroine can have the same power.
-+ We want to be RESTful. What URL should show info about a particular heroine? What URL should show a form to create a heroine? What controller actions are associated?
-+ If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for powers.
 
 ## Rubric
 
