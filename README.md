@@ -17,11 +17,37 @@ In this repo, there is a Rails application with some features built out. Your jo
 
 Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
-## The Domain
+## Domain
 
 There are two models in the domain: Power and Heroine.
 
 Each Heroine has one power. Many Heroines can have the same Power.
+
+## What You Already Have
+
+The starter code has migrations, models, and seed data for the initial Power and Heroine models. There are also routes, controllers and views to support the Power and Heroine index pages.
+
+Once you have followed the setup instructions above, visiting the `/powers` route will display all of the Powers. Similarly, visiting `/heroines` will list all the heroines.
+
+***Schema***
+
+Heroine
+
+| Column | Type |
+| ------------- | ------------- |
+| name | String |
+| super_name | String |
+| created_at  | DateTime  |
+| updated_at  | DateTime  |
+
+Power
+
+| Column | Type |
+| ------------- | ------------- |
+| name  | String  |
+| description | String  |
+| created_at  | DateTime  |
+| updated_at  | DateTime  |
 
 ## Instructions
 
@@ -33,6 +59,8 @@ Update the code of the application to meet the following deliverables. Where app
 
 Create the association between the models.
 
+Each Heroine has one power. Many Heroines can have the same Power.
+
 After you've set up your relationships, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
 
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
@@ -43,7 +71,7 @@ On the heroines index page, a heroine's super name should link to that heroine's
 
 ### 3. Heroine show page
 
-Heroine show page should include the
+Heroine show page should include the:
 
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel)
@@ -53,14 +81,14 @@ The power should link to the power show page.
 
 ### 4. Power show page
 
-Power show page should include the
+Power show page should include the:
 
 - name
 - description
 
 ### 5. Heroine Create page
 
-Show a form to create new Heroine. It should have:
+Show a form to create a new Heroine. It should have:
 
 - an input for name
 - an input for super name
