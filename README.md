@@ -121,6 +121,23 @@ Update the Heroine show page to display the Powers that the heroine has.
 
 Each power should link to the corresponding Power show page.
 
+### 9. Advanced: Power Update Form to Link Multiple Heroines
+
+Show a form to update a Power. It should have:
+
+- an text input for the name
+- an text area input for the description
+- a list of Heroines, with a checkbox for each one
+- a submit button
+
+When the form successfully saves, the user should be redirected to the Power show page.
+
+The power show page should show a link to the edit page.
+
+### 10. Advanced: Show count of Heroines with each power
+
+On the Powers index page, show the total number of heroines who are linked to each power.
+
 ## Rubric
 
 ### Models, Associations, and Validations
