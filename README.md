@@ -121,17 +121,6 @@ Update the Heroine show page to display the Powers that the heroine has.
 
 Each power should link to the corresponding Power show page.
 
-### 9. Advanced: Heroine index view filter
-
-Users should be able to filter the Heroine index view by Power names.
-
-- Add a form to the top of the index view for the user to submit a search term
-- Add handling in the index action.
-
-If a user submits a search term, only display Heroines whose Power's name matches the submitted search term.
-
-![Searching on the heroines route and finding heroines by a power](search_by_power.gif)
-
 ## Rubric
 
 ### Models, Associations, and Validations
