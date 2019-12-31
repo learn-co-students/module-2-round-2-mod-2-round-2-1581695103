@@ -114,7 +114,7 @@ Add error handling to the create action. If a user tries to create an invalid He
 No two heroines can have the same super name.
 
 - Add a validation to prevent this.
-- If necessary, update the error handling in the create action to display this error
+- Update the error handling in the create action to display this error
 
 ### 8. Heroine index view filter
 
