@@ -134,9 +134,9 @@ When the form successfully saves, the user should be redirected to the Power sho
 
 The power show page should show a link to the edit page.
 
-### 10. Advanced: Show count of Heroines with each power
+### 10. Advanced: Powers Index Page Display Heroine Count
 
-On the Powers index page, show the total number of heroines who are linked to each power.
+On the Powers index page, show the total number of Heroines for each Power.
 
 ## Rubric
 
