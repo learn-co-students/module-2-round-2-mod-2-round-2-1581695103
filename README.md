@@ -19,9 +19,9 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 ## Domain
 
-There are two models in the domain: Power and Heroine.
+There are three models in the domain: Power, Heroine, and a join model HeroinePower.
 
-Each Heroine has one power. Many Heroines can have the same Power.
+Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
 ## What You Already Have
 
@@ -55,11 +55,16 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Heroine Power association
+### 1. Heroine-Power association
 
-Create the association between the models.
+Create the association between the models. Update the schema and models to create the HeroinePower association.
 
-Each Heroine has one power. Many Heroines can have the same Power.
+A HeroinePower should have a:
+
+- a heroine
+- a power
+
+Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
 After you've set up your relationships, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
 
@@ -71,14 +76,11 @@ On the heroines index page, a heroine's super name should link to that heroine's
 
 ### 3. Heroine show page
 
-Heroine show page should include the:
+Each Heroine show page should include the:
 
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel)
-- power name
-
-The power should link to the power show page.  
-
+  
 ### 4. Power show page
 
 Power show page should include the:
@@ -105,18 +107,23 @@ Add validations to the Heroine model:
 
 - must have a name
 - must have a super name
-- must have a power
 
-Add error handling to the create action. If a user tries to create an invalid Heroine, it should show the form with the values the user submitted and the validation errors.
+Add error handling to the create action. If a user tries to create an invalid Heroine, the user should see the validation errors.
 
-### 7. Additional Heroine Validations
+### 7. Advanced Heroine Validations
 
-No two heroines can have the same super name.
+No two heroines should have the same super name.
 
 - Add a validation to prevent this.
 - Update the error handling in the create action to display this error
 
-### 8. Heroine index view filter
+### 8. Advanced: Display Heroines' Powers
+
+Update the Heroine show page to display the Powers that the heroine has.
+
+Each power should link to the corresponding Power show page.
+
+### 9. Advanced: Heroine index view filter
 
 Users should be able to filter the Heroine index view by Power names.
 
