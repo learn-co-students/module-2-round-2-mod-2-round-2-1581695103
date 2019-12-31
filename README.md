@@ -66,8 +66,6 @@ A HeroinePower should have a:
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
-After you've set up your relationships, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
-
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
 ### 2. Heroine index page links
@@ -110,7 +108,7 @@ Add validations to the Heroine model:
 
 Add error handling to the create action. If a user tries to create an invalid Heroine, the user should see the validation errors.
 
-### 7. Advanced Heroine Validations
+### 7. Advanced: Heroine Super Name Validation
 
 No two heroines should have the same super name.
 
