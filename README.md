@@ -130,6 +130,8 @@ Show a form to update a Power. It should have:
 - a list of Heroines, with a checkbox for each one
 - a submit button
 
+The update action should create associations for each of the Heroines the user selected.
+
 When the form successfully saves, the user should be redirected to the Power show page.
 
 The power show page should show a link to the edit page.
