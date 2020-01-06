@@ -66,8 +66,6 @@ A HeroinePower should have a:
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
-![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
-
 ### 2. Heroine index page links
 
 On the heroines index page, a heroine's super name should link to that heroine's show page.
@@ -78,7 +76,7 @@ Each Heroine show page should include the:
 
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel)
-  
+
 ### 4. Power show page
 
 Power show page should include the:
@@ -96,8 +94,6 @@ Show a form to create a new Heroine. It should have:
 - a submit button to create the Heroine
 
 After successfully creating a Heroine, the user should be redirected to the new Heroine's show page.
-
-![A form for adding a new heroine](new_heroine_form.gif)
 
 ### 6. Heroine Validations
 
@@ -139,6 +135,10 @@ The power show page should show a link to the edit page.
 ### 10. Advanced: Powers Index Page Display Heroine Count
 
 On the Powers index page, show the total number of Heroines for each Power.
+
+### Feature Demo
+
+![screen capture of feature demo](heroines-features-demo.gif)
 
 ## Rubric
 
