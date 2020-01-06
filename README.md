@@ -125,8 +125,8 @@ Each power should link to the corresponding Power show page.
 
 Show a form to update a Power. It should have:
 
-- an text input for the name
-- an text area input for the description
+- a text input for the name with the current name already displayed
+- a text area input for the description with the current description already displayed
 - a list of Heroines, with a checkbox for each one
 - a submit button
 
