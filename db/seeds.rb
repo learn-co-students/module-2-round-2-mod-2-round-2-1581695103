@@ -24,3 +24,5 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+HeroinePower.create(heroine: Heroine.all.sample, power: Power.all.sample)
