@@ -1,0 +1,10 @@
+<%= form_for @power do |f| %> #@power:exisisting instance
+ <%= f.label 'power name' %><br>
+ <%= f.text_field :name %><br>
+ 
+ <%= f.label 'power Description' %><br>
+ <%= f.text_area :description %><br>
+ <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+ 
+ <%= f.submit "Submit power" %>
+<% end %>

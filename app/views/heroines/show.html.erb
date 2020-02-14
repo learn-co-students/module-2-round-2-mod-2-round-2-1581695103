@@ -1,0 +1,7 @@
+<h2>Welcome to <%= @heroine.name %>'s Show Page!</h2>
+
+
+<label>Name: <%= @heroine.name %></label><br/>
+<label>Super Name: <%= @heroine.super_name %></label><br/>
+<labe>Super Power: <%= link_to @power.name, power_path(@power.id) %></labe>
+
