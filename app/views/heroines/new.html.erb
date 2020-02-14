@@ -1,0 +1,9 @@
+<h1>Create hero page/new</h1>
+
+<%= form_for :heroine do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name_power %></p>
+  <%= f.collection_select :heroine_id, Heroine.all, :id, :name, prompt: true %>
+  <%= f.submit %>
+<% end %>
+
