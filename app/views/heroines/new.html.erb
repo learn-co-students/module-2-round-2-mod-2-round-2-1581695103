@@ -1,0 +1,14 @@
+<%= form_for @heroine do |t| %>
+    <%= t.label :name %>
+    <%= t.text_field :name %>
+    <br>
+    <%= t.label :super_name %>
+    <%= t.text_field :super_name %>
+    <br>
+    <%= t.collection_select :powers, Power.all, :id, :name %>
+
+    <%= t.submit %>
+<% end %>
+
+
+
