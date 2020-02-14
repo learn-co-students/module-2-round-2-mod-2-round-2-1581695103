@@ -24,3 +24,9 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+
+
+HeroinePower.create(power_id: Power.ids.sample, heroine_id: Heroine.ids.sample)
+HeroinePower.create(power_id: Power.ids.sample, heroine_id: Heroine.ids.sample)
+HeroinePower.create(power_id: Power.ids.sample, heroine_id: Heroine.ids.sample)
