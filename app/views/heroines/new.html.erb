@@ -1,0 +1,24 @@
+<h1>Create a new heroine </h1>
+
+<%= form_for @heroine do |f| %>
+
+    <% if @heroine.errors.any? %>
+        <h2>Please check errors. </h2>
+        <% @heroine.errors.full_messages. each do |message| %>
+            <%= message %>
+        <% end %>
+    <% end %>
+
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+
+    <%= f.label :super_name %>:
+    <%= f.text_field :super_name %>
+
+    <%= f.collection_select :power_ids, Power.all, :id, :name %>
+    <!-- something with id's here -->
+
+    <%= f.submit %>
+
+<% end %>
+
